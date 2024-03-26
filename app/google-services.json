@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "831792893894",
+    "project_id": "login-auth-1594e",
+    "storage_bucket": "login-auth-1594e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:831792893894:android:5ee8983f4f1e8a5fc5ecc7",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkYQo7JzN13gAxhZ5oMAWdH0-sgs45zgo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
