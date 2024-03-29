@@ -55,7 +55,7 @@ public class Login extends AppCompatActivity {
 
             signup.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    Intent intent = new Intent(getApplicationContext(), Register.class);
+                    Intent intent = new Intent(getApplicationContext(), Register0.class);
                     startActivity(intent);
 //                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                     finish();
