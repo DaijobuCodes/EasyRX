@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">My Application</string>
     <string name="logout">LogOut</string>
-    <string name="nor_registered_yet_sign_up">Nor Registered yet? Sign-Up</string>
+    <string name="nor_registered_yet_sign_up">Not Registered yet? Sign-Up</string>
     <string name="login">Login</string>
     <string name="go_back">Go Back?</string>
     <string-array name="spinner_bloodgroup">

@@ -30,6 +30,8 @@ public class Register extends AppCompatActivity {
 
     TextView login;
 
+    TextView goback;
+
     public void onStart() {
         super.onStart();
         // Check if user is signed in (non-null) and update UI accordingly.
@@ -50,11 +52,21 @@ public class Register extends AppCompatActivity {
         password = findViewById(R.id.password);
         register_button = findViewById(R.id.register_button);
         login = findViewById(R.id.loginText);
+        goback = findViewById(R.id.goBackText);
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), Login.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        goback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Registerp2.class);
                 startActivity(intent);
                 finish();
             }
@@ -84,7 +96,7 @@ public class Register extends AppCompatActivity {
                 auth.createUserWithEmailAndPassword(email, pass)
                         .addOnCompleteListener(task -> {
                             if (task.isSuccessful()){
-                                Toast.makeText(Register.this, "LoggedIn", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Register.this, "Signed Up successfully.", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(getApplicationContext(),MainActivity.class);
                                 startActivity(intent);
                                 finish();
