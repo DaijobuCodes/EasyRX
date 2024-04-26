@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -52,6 +53,7 @@ public class Register0 extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), Registerp2.class);
                 startActivity(intent);
                 finish();
+//                Toast.makeText(Register0.this, "Kharab hai", Toast.LENGTH_SHORT).show();
             }
         });
 

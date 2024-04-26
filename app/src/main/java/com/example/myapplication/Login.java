@@ -53,55 +53,46 @@ public class Login extends AppCompatActivity {
         signup = findViewById(R.id.signup);
 
 
-            signup.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-                    Intent intent = new Intent(getApplicationContext(), Register0.class);
-                    startActivity(intent);
+            signup.setOnClickListener(v -> {
+                Intent intent = new Intent(getApplicationContext(), Register0.class);
+                startActivity(intent);
 //                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-                    finish();
-                }
+                finish();
             });
 
 
 
-            login_button.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    String email, pass;
-                    email =String.valueOf( username.getText());
-                    pass = String.valueOf(password.getText());
+            login_button.setOnClickListener(v -> {
+                String email, pass;
+                email =String.valueOf( username.getText());
+                pass = String.valueOf(password.getText());
 
-                    if(TextUtils.isEmpty(email)){
-                        Toast.makeText(Login.this, "Enter Email", Toast.LENGTH_SHORT).show();
-                        return;
-                    }
-                    if(TextUtils.isEmpty(pass)){
-                        Toast.makeText(Login.this, "Enter Password", Toast.LENGTH_SHORT).show();
-                        return;
-                    }
-
-                    if(auth!=null){
-                        auth.signInWithEmailAndPassword(email, pass)
-                                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                                    @Override
-                                    public void onComplete(@NonNull Task<AuthResult> task) {
-                                        if (task.isSuccessful()) {
-                                            Toast.makeText(Login.this, "Login Complete", Toast.LENGTH_SHORT).show();
-                                            Intent intent = new Intent(getApplicationContext(),MainActivity.class);
-                                            startActivity(intent);
-                                            finish();
-
-                                        } else {
-                                            Toast.makeText(Login.this, "Login Failed", Toast.LENGTH_SHORT).show();
-
-                                        }
-                                    }
-
-                                });
-                    }
-
-
+                if(TextUtils.isEmpty(email)){
+                    Toast.makeText(Login.this, "Enter Email", Toast.LENGTH_SHORT).show();
+                    return;
                 }
+                if(TextUtils.isEmpty(pass)){
+                    Toast.makeText(Login.this, "Enter Password", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                if(auth!=null){
+                    auth.signInWithEmailAndPassword(email, pass)
+                            .addOnCompleteListener(task -> {
+                                if (task.isSuccessful()) {
+                                    Toast.makeText(Login.this, "Login Complete", Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                                    startActivity(intent);
+                                    finish();
+
+                                } else {
+                                    Toast.makeText(Login.this, "Login Failed", Toast.LENGTH_SHORT).show();
+
+                                }
+                            });
+                }
+
+
             });
 
 

@@ -20,19 +20,30 @@ import com.google.firebase.auth.FirebaseUser;
 public class MainActivity extends AppCompatActivity {
 
     FirebaseAuth auth;
-    Button button;
+    Button button, send;
     TextView textView;
     FirebaseUser user;
+    String fullname, age, gender, DOB;
+
+    String ID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+         Intent intent2=getIntent();
+         ID= intent2.getStringExtra("id");
+//        fullname = intent2.getStringExtra("fname");
+//        age = intent2.getStringExtra("age");
+//        gender = intent2.getStringExtra("gender");
+//        DOB = intent2.getStringExtra("DOB");
+
         auth = FirebaseAuth.getInstance();
         button = findViewById(R.id.logout);
         textView = findViewById(R.id.welcome);
-        user = auth.getCurrentUser();
+//        user = auth.getCurrentUser();
+        send = findViewById(R.id.send);
 
         if(user == null){
             Intent intent = new Intent(getApplicationContext(), Login.class);
@@ -48,6 +59,16 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 FirebaseAuth.getInstance().signOut();
                 Intent intent = new Intent(getApplicationContext(), Login.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        send.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+                Intent intent = new Intent(getApplicationContext(), Uploadinstance.class);
                 startActivity(intent);
                 finish();
             }

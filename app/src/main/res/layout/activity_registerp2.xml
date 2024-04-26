@@ -35,19 +35,57 @@
                 android:textStyle="bold"
                 android:textColor="@color/purple"/>
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Personal Information"
+                android:id="@+id/info"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:textStyle="italic"
+                android:textColor="@color/purple"/>
+
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:id="@+id/p_name"
                 android:background="@drawable/editor"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="10dp"
                 android:drawableLeft="@drawable/baseline_person_24"
                 android:drawablePadding="8dp"
                 android:hint="Name"
                 android:padding="8dp"
                 android:textColor="@color/black"
                 android:textColorHighlight="@color/cardview_dark_background"
-                android:layout_marginTop="40dp"/>
+                android:layout_marginTop="20dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/p_age"
+                android:background="@drawable/editor"
+                android:layout_marginBottom="10dp"
+                android:drawableLeft="@drawable/baseline_accessibility_24"
+                android:drawablePadding="8dp"
+                android:hint="Age"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:textColorHighlight="@color/cardview_dark_background"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/p_DOB"
+                android:background="@drawable/editor"
+                android:layout_marginBottom="20dp"
+                android:drawableLeft="@drawable/baseline_calendar_month_24"
+                android:drawablePadding="8dp"
+                android:hint="DOB: DD/MM/YYYY"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:textColorHighlight="@color/cardview_dark_background"
+                android:layout_marginTop="10dp"/>
 
            <LinearLayout
                android:layout_width="match_parent"
@@ -75,30 +113,46 @@
 
            </LinearLayout>
 
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/p_gender"
+                android:background="@drawable/editor"
+                android:layout_marginBottom="20dp"
+                android:drawableLeft="@drawable/icons8_gender_24"
+                android:drawablePadding="8dp"
+                android:hint="Gender"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:textColorHighlight="@color/cardview_dark_background"
+                android:layout_marginTop="10dp"/>
 
 
 
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Male"
-                android:textSize="15sp"
-                android:layout_marginTop="10dp"
-                android:id="@+id/checkbox1"/>
 
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Female"
-                android:textSize="15sp"
-                android:id="@+id/checkbox2"/>
 
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Rather not specify"
-                android:textSize="15sp"
-                android:id="@+id/checkbox3"/>
+
+<!--            <CheckBox-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Male"-->
+<!--                android:textSize="15sp"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:id="@+id/checkbox1"/>-->
+
+<!--            <CheckBox-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Female"-->
+<!--                android:textSize="15sp"-->
+<!--                android:id="@+id/checkbox2"/>-->
+
+<!--            <CheckBox-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Rather not specify"-->
+<!--                android:textSize="15sp"-->
+<!--                android:id="@+id/checkbox3"/>-->
 
             <Button
                 android:layout_width="match_parent"
@@ -111,8 +165,6 @@
                 app:cornerRadius="20dp"/>
 
         </LinearLayout>
-
-
 
 
     </androidx.cardview.widget.CardView>
